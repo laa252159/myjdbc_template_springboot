@@ -21,6 +21,7 @@ public class PurchaseRepository {
         jdbc.update(sql,
                 purchase.getProduct(),
                 purchase.getPrice());
+        throw new RuntimeException("MY EXCEPTION");
     }
 
     public List<Purchase> findAllPurchases() {
